@@ -7,6 +7,20 @@ use Illuminate\Contracts\Events\Dispatcher;
 use JeroenNoten\LaravelAdminLte\Events\BuildingMenu;
 use App\Aluno;
 use App\AF;
+use App\Perimetria;
+use App\RightLeft;
+use App\Protocol;
+use App\Bicipital;
+use App\Tricipital;
+use App\Toracica;
+use App\Subescapular;
+use App\AxiliarMedia;
+use App\SupraIliaca;
+use App\Abdominal;
+use App\Coxa;
+use App\PanturrilhaMedial;
+use App\Bioimpedancia;
+use App\TesteResistenciaMuscular;
 
 class HomeController extends Controller
 {
@@ -74,4 +88,12 @@ class HomeController extends Controller
         return view('af.novaaf', compact('aluno','idade','af_n'));
     }
 
+    public function afs($code)
+    {
+        list($access_code, $af_n) = explode("-", $code);
+
+        $afs = AF::where('access_code', $access_code)->get();
+
+        return view('af.afs', compact('access_code','af_n','afs'));
+    }
 }

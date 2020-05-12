@@ -18,8 +18,8 @@ class CreateAFSTable extends Migration
             $table->string('access_code');
             $table->string('af_n');
             $table->string('date');
-            $table->string('goal');
-            $table->string('note');
+            $table->string('goal')->nullable();
+            $table->string('note')->nullable();
             $table->string('height');
             $table->string('age');
             $table->string('weight');

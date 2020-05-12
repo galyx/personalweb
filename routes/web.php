@@ -18,6 +18,7 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/admin/novoaluno', 'HomeController@novoaluno');
 Route::get('/admin/alunos', 'HomeController@alunos');
 Route::get('/admin/novaaf/{access_code}', 'HomeController@novaaf');
+Route::get('/admin/af/{code}', 'HomeController@afs');
 
 /* Dados do aluno */
 Route::post('/aluno/store', 'AlunoController@store')->name('aluno.store');
@@ -27,3 +28,4 @@ Route::get('/aluno/edit/{access_code}', 'AlunoController@edit');
 Route::post('/aluno/update/{access_code}', 'AlunoController@update');
 
 /* Dados da avaliação fisica */
+Route::post('/AF/store', 'AFController@store')->name('AF.store');

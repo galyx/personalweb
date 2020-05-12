@@ -52,7 +52,7 @@ class AlunoController extends Controller
             'user_id'       => auth()->user()->id,
             'access_code'   => $access_code,
             'cpf'           => $request['cpf'],
-            'name'          => $request['name'],
+            'name'          => mb_convert_case($request['name'], MB_CASE_TITLE),
             'date'          => $date,
             'email'         => $request['email'],
             'mobile'        => $request['mobile'],
@@ -126,7 +126,7 @@ class AlunoController extends Controller
         // Salvbando dados
         $create_aluno = Aluno::where('user_id',auth()->user()->id)->where('access_code',$access_code)->update([
             'cpf'           => $cpf,
-            'name'          => $request['name'],
+            'name'          => mb_convert_case($request['name'], MB_CASE_TITLE),
             'date'          => $date,
             'email'         => $request['email'],
             'mobile'        => $request['mobile'],

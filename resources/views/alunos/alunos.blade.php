@@ -63,7 +63,7 @@
             </div>
             <div class="card-body table-responsive">
                 <table class="table table-hover">
-                    <thead class="bg-info">
+                    <thead class="bg-info ">
                         <tr>
                             <th>Codigo de Acesso</th>
                             <th>CPF</th>
@@ -89,7 +89,7 @@
                                 <td colspan="7">
                                     <div class="btn-group">
                                         <a href="{{url('/admin/novaaf',$aluno->access_code)}}" class="btn btn-primary"><i class="fas fa-clipboard"></i> Adicionar AF</a>
-                                        <a href="" class="btn btn-primary"><i class="fas fa-clipboard-list"></i> Visualizar AF</a>
+                                        <a href="{{url('/admin/af',$aluno->access_code.'-1')}}" class="btn btn-primary"><i class="fas fa-clipboard-list"></i> Visualizar AF</a>
                                         <a href="{{url('/aluno/edit',$aluno->access_code)}}" class="btn btn-success"><i class="fas fa-user-edit"></i> Editar Aluno</a>
                                         <a href="{{url('/aluno/show',$aluno->access_code)}}" class="btn btn-danger"><i class="fas fa-trash"></i> Apagar Aluno</a>
                                     </div>

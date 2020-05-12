@@ -61,6 +61,7 @@
 <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ asset('vendor/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
 <script src="{{url('/js/mask.jquery.js')}}"></script>
+<script src="{{url('/js/maskmoney.js')}}"></script>
 <script src="{{url('/plugins/jquery-ui/jquery-ui.js')}}"></script>
 
 @include('adminlte::plugins', ['type' => 'js'])
